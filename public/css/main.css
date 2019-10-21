@@ -1,0 +1,95 @@
+body{
+    background-color: #F5F5F5;
+}
+
+.navbar {
+background-color: #397e01;
+}
+
+ .brand{
+    color: white;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    font-size: 70px;
+}
+
+#imgButton{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.profilePic{
+    padding: 9px;
+    margin: 9px;
+}
+
+#conference{
+    color: rgb(32, 178, 93);
+}
+
+.new-post {
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.new-post header,
+.posts header {
+    margin-bottom: 20px;
+}
+
+.posts .post {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 29px solid orange;
+    margin-bottom: 60px;
+}
+.post{
+    border-radius: 9px;
+}
+
+.posts .post .info {
+    color: blue;
+    font-style: italic;
+}
+
+.error,
+.success {
+    text-align: center;
+}
+
+.error {
+    
+    background-color: #f9b5af;
+    color: red;
+}
+
+.error ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.success {
+    background-color: #d1f9da;
+    color: green;
+}
+
+.intl-tel-input {
+    display: table-cell;
+  }
+  .intl-tel-input .selected-flag {
+    z-index: 4;
+  }
+  .intl-tel-input .country-list {
+    z-index: 5;
+  }
+  .input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+  }
