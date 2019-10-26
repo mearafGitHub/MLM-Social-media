@@ -46,7 +46,7 @@
       
         <div class="col-md-6">
             <h1 style="color:#397e01">Sign Up</h1>
-           <h3 style="color:#397e01">Create an account. </h3><span> <h6> If you do not have an account yet, you can create here.</h6></span>
+            <h3 style="color:#397e01">Create an account. </h3><span> <h5> If you do not have an account yet, you can create here.</h5></span>
             <form action="{{ route('signup') }}" method="post">
                 
                 <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
@@ -62,8 +62,8 @@
                 </div>
 
                 <div class="input-group {{ $errors->has('phone') ? 'has-error' : '' }}">
-                    <label for ="phone_number" style="color:#397e01">Your Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone_number" id="phone_number" value="{{ Request::old('phone_number') }}">
+                    <input type="tel" class="form-control" name="phone_number"  id="phone_number" value="{{ Request::old('phone_number') }}"> 
+                    <span class="input-group-addon"> Tel <span>
 
                 </div>
 
@@ -94,9 +94,9 @@
                    
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group {{ $errors->has('confpassword') ? 'has-error' : '' }}">
+                        <div class="form-group {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
                             <label for="confpassword" style="color:#397e01">Confirm Password</label>
-                            <input class="form-control" type="password" name="confpassword" id="confpassword" value="{{ Request::old('confpassword') }}">
+                            <input class="form-control" type="password" name="password_confirmation" id="password_confirmation" value="{{ Request::old('password_confirmation') }}">
                         </div>
                     </div>
 

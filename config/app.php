@@ -162,6 +162,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        // ... Providers array ...
+        Cohensive\Embed\EmbedServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
@@ -225,6 +228,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // ... Aliases array ...
+        'Embed' => Cohensive\Embed\Facades\Embed::class,
 
     ],
 

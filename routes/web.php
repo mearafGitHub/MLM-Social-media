@@ -79,6 +79,12 @@ Route::get('/delete-post/{post_id}', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/profile', [
+    'uses' => 'userController@profile',
+    'as' => 'profile',
+    'middleware' => 'auth'
+]);
+
 Route::post('/edit', [
     'uses' => 'PostController@postEditPost',
     'as' => 'edit'
@@ -93,3 +99,7 @@ Route::post('/like', [
 Auth::routes();
 
 Route::get('/home', 'PostController@getDashboard')->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

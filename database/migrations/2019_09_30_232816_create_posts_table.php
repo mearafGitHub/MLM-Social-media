@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->text('post_body');
+            $table->integer('likes_count');
             $table->integer('user_id');
         });
     }

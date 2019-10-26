@@ -15,9 +15,10 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
-    public function getDashboard()
+    public function getDashBoard()
     {
         $posts = Post::orderBy('created_at', 'desc')->get();
+        //$posts = Post::paginate(5, 'created_at', 'desc')->get();
         return view('home', ['posts' => $posts]);
     }
 
@@ -58,6 +59,20 @@ class PostController extends Controller
         $post->post_body = $request['post_body'];
         $post->update();
         return response()->json(['new_body' => $post->post_body], 200);
+    }
+
+    public function like($id){
+        $loggedin_user = Auth::user()->id;
+        $like_user = Like::where(['user_id'=>$loggedin_user, 'post_id'=>$id]);
+
+        if(empty($like_user->user_id)){
+            $user_id = Auth::user()->user_id;
+            $post_id =$id;
+            $like = new Like;
+            $like->user_id = $user_id;
+            $like->post_id = $post_id;
+            $like->save();
+        }
     }
 
     public function postLikePost(Request $request)

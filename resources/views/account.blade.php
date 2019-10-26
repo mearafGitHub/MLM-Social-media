@@ -6,12 +6,11 @@
 
 @section('content')
     <section class="row new-post">
-    <header><h1 style="color: green"> {{ $user->full_name }} </h1></header>
-
         <div class="row-md-6">
+        <header><h1 style="color: green align: center"> {{ $user->full_name }} </h1></header>
             
-            <div class="col-sm-5 ">
-                <img src="{{ route('account.image', ['filename' => $user->full_name . '-' . $user->id . '.jpg']) }}" alt="" class="img-responsive">
+            <div class="col-sm-5 " id="profilePic">
+                <img style="border-radius: 50%; float: left; " src="{{ route('account.image', ['filename' => $user->full_name . '-' . $user->id . '.jpg']) }}" alt="" class="img-responsive">
             </div>
            
             <div class="col-sm-6 row-sm-offset-2">
@@ -22,6 +21,8 @@
                     <input type="text" name="full_name" class="form-control" value="{{ $user->full_name }}" id="full_name">
                 </div>
                 <div class="form-group">
+
+        
                 <h2>Change your profile picture?</h2>
                     <label for="image">Image (only .jpg)</label>
                     <input type="file" name="image" class="form-control" id="image">

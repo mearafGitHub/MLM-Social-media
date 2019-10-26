@@ -6,11 +6,11 @@ body{
 background-color: #397e01;
 }
 
- .brand{
+.brand{
     color: white;
     padding-bottom: 60px;
     padding-top: 40px;
-    font-size: 70px;
+    font-size: 63px;
 }
 
 #imgButton{
@@ -21,6 +21,15 @@ background-color: #397e01;
 .profilePic{
     padding: 9px;
     margin: 9px;
+}
+
+#profilePic{
+    width: 300px;
+    height: 300px;
+    margin-right: 100px;
+    border-radius: 50%; 
+    float: left; 
+    margin-bottom: 30px;
 }
 
 #conference{
@@ -52,19 +61,24 @@ background-color: #397e01;
 }
 
 .posts .post .info {
-    color: blue;
+    color: orange;
     font-style: italic;
 }
 
 .error,
 .success {
-    text-align: center;
+    text-align: center center;
+    height: 30px;
+    border-radius: 30px;
+    color: white;
 }
 
 .error {
-    
-    background-color: #f9b5af;
-    color: red;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgb(238, 125, 163);
+    color: white;
+    text-align: center center;
 }
 
 .error ul {
@@ -76,6 +90,8 @@ background-color: #397e01;
 .success {
     background-color: #d1f9da;
     color: green;
+    height: 30px;
+    border-radius: 30px;
 }
 
 .intl-tel-input {

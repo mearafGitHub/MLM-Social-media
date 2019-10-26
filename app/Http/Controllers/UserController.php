@@ -9,10 +9,15 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 
+
 class UserController extends Controller{
 
     public function getDashboard(){
         return view('home');
+    }
+
+    public function profile(){
+        return(array('user'=> Auth::user()));
     }
 
     public function postSignUp(Request $request){
@@ -20,7 +25,7 @@ class UserController extends Controller{
         $this->validate($request, [
             'email' => 'required|email|unique:users',
             'full_name' => 'required|max:120',
-            'password' => 'required|min:4',
+            'password' => 'required|confirmed|min:4',
             'birthdate' => 'required',
             'gender' => 'required',
             'phone_number'=> 'required',
